@@ -11,6 +11,8 @@ import { bailian } from '../llm/bailian'
 import { ollama } from '../llm/ollama'
 import { grok } from '../llm/grok'
 import { openrouter } from '../llm/openrouter'
+import { cerebras } from '../llm/cerebras'
+
 
 // --- getModels: Lists all REAL, configured backend providers ---
 export function getModels(env: Record<string, string>) {
@@ -29,5 +31,7 @@ export function getModels(env: Record<string, string>) {
     ollama(env),
     grok(env),
     openrouter(env),
+    cerebras(env),
+
   ].filter((it) => it.requiredEnv.every((it) => it in env))
 }
