@@ -11,6 +11,6 @@ export function moonshot(env: Record<string, string>) {
   })
   r.name = 'moonshot'
   r.requiredEnv = ['MOONSHOT_API_KEY']
-  r.supportModels = ['moonshot-v1-128k', 'moonshot-v1-8k', 'moonshot-v1-32k']
+  r.supportModels = ['moonshot-v1-128k', 'moonshot-v1-8k', 'moonshot-v1-32k','kimi-thinking-preview','kimi-k2-0711-preview']
   return r
 }
